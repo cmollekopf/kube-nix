@@ -4,10 +4,6 @@ let
   pkgs = import <nixpkgs> { inherit system; };
 in
 rec {
-  pkgconfig = import ./pkgs/pkgconfig {
-    inherit (pkgs) stdenv fetchurl automake;
-  };
-
   kasync = import ./pkgs/kasync {
     inherit (pkgs) stdenv fetchgit cmake extra-cmake-modules qt5;
   };

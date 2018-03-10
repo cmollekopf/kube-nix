@@ -5,6 +5,8 @@
 stdenv.mkDerivation rec {
     name = "kasync-1.2.0";
 
+    separateDebugInfo = true;
+
     src = fetchgit {
       url = "git://anongit.kde.org/kasync";
     };

@@ -5,6 +5,8 @@
 stdenv.mkDerivation rec {
     name = "kube-0.6";
 
+    separateDebugInfo = true;
+
     src = fetchgit {
       url = "git://anongit.kde.org/kube";
       rev = "refs/heads/develop";

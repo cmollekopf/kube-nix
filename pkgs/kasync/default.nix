@@ -1,5 +1,5 @@
 { stdenv, fetchgit,
-  cmake, extra-cmake-modules, qt5
+  cmake, extra-cmake-modules, qtbase
 }:
 
 stdenv.mkDerivation rec {
@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
       url = "git://anongit.kde.org/kasync";
     };
 
-    buildInputs = [ cmake extra-cmake-modules qt5.qtbase ];
+    buildInputs = [ cmake extra-cmake-modules qtbase ];
 
     meta = {
         description = "KAsync";

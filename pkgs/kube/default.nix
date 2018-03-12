@@ -1,9 +1,9 @@
 { stdenv, fetchgit,
-  cmake, extra-cmake-modules, qt5, kcoreaddons, kmime, kasync, kcontacts, sink, qgpgme, kcodecs
+  cmake, extra-cmake-modules, qtbase, qtquickcontrols2, qtwebengine, kcoreaddons, kmime, kasync, kcontacts, sink, qgpgme, kcodecs, debug ? true
 }:
 
 stdenv.mkDerivation rec {
-    name = "kube-0.6";
+    name = "kube-develop";
 
     separateDebugInfo = true;
 
@@ -13,8 +13,9 @@ stdenv.mkDerivation rec {
       branchName = "develop";
     };
 
-    buildInputs = [ cmake extra-cmake-modules qt5.qtbase kcoreaddons kasync kmime kcontacts sink qt5.qtquickcontrols2 qt5.qtwebengine qgpgme kcodecs];
+    cmakeBuildType = "Debug";
 
+    buildInputs = [ cmake extra-cmake-modules qtbase qtquickcontrols2 qtwebengine kcoreaddons kasync kmime kcontacts sink qgpgme kcodecs];
     meta = {
         description = "Kube";
         homepage = http://www.kde.org;

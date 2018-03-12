@@ -1,15 +1,16 @@
 { stdenv, fetchgit,
-  cmake, extra-cmake-modules, qt5, kcoreaddons
+  cmake, extra-cmake-modules, qtbase, qtxmlpatterns, kcoreaddons
 }:
 
 stdenv.mkDerivation rec {
     name = "kdav2-1.2.0";
 
+    separateDebugInfo = true;
     src = fetchgit {
       url = "git://anongit.kde.org/kdav2";
     };
 
-    buildInputs = [ cmake extra-cmake-modules qt5.qtbase qt5.qtxmlpatterns kcoreaddons ];
+    buildInputs = [ cmake extra-cmake-modules qtbase qtxmlpatterns kcoreaddons ];
 
     meta = {
         description = "KDAV2";

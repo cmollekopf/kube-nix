@@ -1,15 +1,16 @@
 { stdenv, fetchgit,
-  cmake, extra-cmake-modules, qt5, kcoreaddons, cyrus_sasl, kmime, kcodecs
+  cmake, extra-cmake-modules, qtbase, kcoreaddons, cyrus_sasl, kmime, kcodecs
 }:
 
 stdenv.mkDerivation rec {
     name = "kimap2-1.2.0";
 
+    separateDebugInfo = true;
     src = fetchgit {
       url = "git://anongit.kde.org/kimap2";
     };
 
-    buildInputs = [ cmake extra-cmake-modules qt5.qtbase kcoreaddons kcodecs];
+    buildInputs = [ cmake extra-cmake-modules qtbase kcoreaddons kcodecs];
     propagatedBuildInputs = [ cyrus_sasl kcoreaddons kmime ];
 
     meta = {

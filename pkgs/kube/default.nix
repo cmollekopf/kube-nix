@@ -8,9 +8,7 @@ stdenv.mkDerivation rec {
     separateDebugInfo = true;
 
     src = fetchgit {
-      url = "git://anongit.kde.org/kube";
-      rev = "refs/heads/develop";
-      branchName = "develop";
+      inherit (builtins.fromJSON (builtins.readFile ./nixpkgs.json)) url rev sha256;
     };
 
     cmakeBuildType = "Debug";

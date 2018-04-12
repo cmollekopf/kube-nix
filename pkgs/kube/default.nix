@@ -12,6 +12,7 @@ stdenv.mkDerivation rec {
     };
 
     cmakeBuildType = "Debug";
+    cmakeFlags="-DCMAKE_EXPORT_COMPILE_COMMANDS=True";
 
     buildInputs = [ cmake extra-cmake-modules qtbase qtquickcontrols2 qtwebengine kcoreaddons kasync kmime kcontacts sink qgpgme kcodecs];
     meta = {

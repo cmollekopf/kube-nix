@@ -1,7 +1,7 @@
 {
   "url": "git://anongit.kde.org/sink",
-  "rev": "5392707ae331981861f74d3075307e67d4d06ba8",
-  "date": "2018-04-03T11:27:48+02:00",
-  "sha256": "0dwn126wbf7ba1jz1qwhkz1bq4qyd4y71wdb6g0hgn1ag7jfg89j",
+  "rev": "7c84c774653a256cf2474aefecfdbeed635d9cc2",
+  "date": "2018-04-09T16:31:38+02:00",
+  "sha256": "03jhx6945qsns94a7w9nrh2zhcd2fb8fscy1hzj3w3lj6vlbv1iv",
   "fetchSubmodules": true
 }

@@ -1,7 +1,7 @@
 {
   "url": "git://anongit.kde.org/kube",
-  "rev": "396ef0f89531ff7d502e3df3187850d6182e272b",
-  "date": "2018-04-03T12:18:16+02:00",
-  "sha256": "0h1gh7jwya290k6gbn9rn6j3piqvdq9hfqcck87v6m14sqh8c0rx",
+  "rev": "8e2f9664da95dee0ca55a9129e02d298a826f18e",
+  "date": "2018-04-09T14:49:24+02:00",
+  "sha256": "1gjyvjlb1gcbq0ag9yhn9h73h51z2y6w5q27yxnvjvvs6bxhcbfx",
   "fetchSubmodules": true
 }

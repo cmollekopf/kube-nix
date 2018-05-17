@@ -23,7 +23,7 @@ rec {
     inherit kasync kimap2 kdav2;
     inherit (pkgs) stdenv fetchgit cmake extra-cmake-modules qt5 lmdb flatbuffers curl readline xapian;
     inherit (pkgs.kdeFrameworks) kcoreaddons kcodecs;
-    inherit (pkgs.kdeApplications) kmime kcontacts;
+    inherit (pkgs.kdeApplications) kmime kcontacts kcalcore;
   };
 
   kube = import ./pkgs/kube {
@@ -31,6 +31,6 @@ rec {
     inherit (pkgs) stdenv fetchgit cmake extra-cmake-modules qt5;
     inherit (pkgs.libsForQt5) qgpgme;
     inherit (pkgs.kdeFrameworks) kcoreaddons kcodecs;
-    inherit (pkgs.kdeApplications) kmime kcontacts;
+    inherit (pkgs.kdeApplications) kmime kcontacts kcalcore;
   };
 }

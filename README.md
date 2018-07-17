@@ -12,4 +12,5 @@ To run a shell (shell.nix is relevant):
     $ unpackPhase
     cd into created $root
     $ cmakeConfigurePhase
+    Copy or link to the generated compile_commands.json
 

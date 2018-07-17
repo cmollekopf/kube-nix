@@ -1,5 +1,5 @@
 { stdenv, fetchgit,
-  cmake, extra-cmake-modules, qtbase, qtquickcontrols2, qtwebengine, kcoreaddons, kmime, kasync, kcontacts, kcalcore, sink, qgpgme, gpgme, kcodecs, debug ? true
+  cmake, extra-cmake-modules, qtbase, qtquickcontrols2, qtwebengine, kcoreaddons, kmime, kasync, kcontacts, kcalcore, sink, gpgme, kcodecs, debug ? true
 }:
 
 stdenv.mkDerivation rec {
@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
     cmakeBuildType = "Debug";
     cmakeFlags="-DCMAKE_EXPORT_COMPILE_COMMANDS=True";
 
-    buildInputs = [ cmake extra-cmake-modules qtbase qtquickcontrols2 qtwebengine kcoreaddons kasync kmime kcontacts sink qgpgme gpgme kcodecs kcalcore];
+    buildInputs = [ cmake extra-cmake-modules qtbase qtquickcontrols2 qtwebengine kcoreaddons kasync kmime kcontacts sink gpgme kcodecs kcalcore];
     meta = {
         description = "Kube";
         homepage = http://www.kde.org;
